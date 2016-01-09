@@ -10,7 +10,7 @@
         <!--MainController-->
         <scene sceneID="UjL-9G-XJI">
             <objects>
-                <viewController title="MainController" id="mud-Qv-P9A" customClass="ViewController" customModule="SleepingInTheLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainController" id="mud-Qv-P9A" customClass="ViewController" customModule="Flickr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hv9-rC-DaW"/>
                         <viewControllerLayoutGuide type="bottom" id="GzW-nZ-Yhf"/>
@@ -44,6 +44,9 @@
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="105" y="540" width="189" height="50"/>
                                 </variation>
+                                <connections>
+                                    <action selector="touchGrabNewImageButton:" destination="mud-Qv-P9A" eventType="touchUpInside" id="QEe-7d-xqU"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="btp-o0-IJm" userLabel="Photo">
                                 <rect key="frame" x="160" y="80" width="279" height="372"/>
@@ -76,6 +79,10 @@
                             <constraint firstItem="ImD-hX-lH6" firstAttribute="leading" secondItem="2sa-qB-7wC" secondAttribute="leadingMargin" id="qm3-SV-Jcn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="btp-o0-IJm" id="in2-a6-Ze0"/>
+                        <outlet property="photoTitle" destination="Z7R-ex-C6D" id="XUI-0a-eo1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hN8-Nf-coI" sceneMemberID="firstResponder"/>
             </objects>
